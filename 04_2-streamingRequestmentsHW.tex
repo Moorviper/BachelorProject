@@ -1,0 +1,146 @@
+\sub{Verwendete Hardware für Streamingtests}
+
+Für Streamingtests stehen verschiedene Geräte zur Verfügung.\\
+
+2x iPhone SE, 1x iPhone6, Ein Macbook Pro \zoll{15} late 2015, sowie ein Eigenbau Mac (Hackintosh).\\
+Die iPhones werden nicht verwendet, obwohl diese zwar prinzipiell für den geplanten Einsatz geeignet sind, aber zu umständlich in der Bedienung wären.\\
+
+Das Haus ist schon im vorigen Kapitel erwähnt auf den wichtigsten Strecken mit Gigabit verkabelt und als Wlan-Router wird ein Ubiquiti AC PRO verwendet,
+welcher 450 Mbit bei 2,4 GHz und 1300 Mbit (\quote{Netto} \textasciitilde 850 Mbit/s) bei 5 GHz an Übertragungskapazität zur Verfügung stellt.
+Der DSL-Router ist eine FritzBox 7490 welcher noch von der Rhön Energie stammt.
+Engpässe können daher innerhalb des Hauses wie schon festgestellt nicht auftreten.
+
+
+
+% {\vspace{-2cm}}
+\subsub{Eigenbau Mac}
+Standard Windows-PC mit Clover-Bootloader um MacOS starten zu können.
+\small
+\color{black}
+\vspace{0.3cm}
+\begin{center}
+  \begin{tikzpicture}
+    \clip node (m) [matrix,matrix of nodes,
+    fill=fulda_green!20,inner sep=0pt,
+    nodes in empty cells,
+    nodes={minimum height=1cm,minimum width=2.6cm,anchor=center,outer sep=0,font=\sffamily},
+    row 1/.style={nodes={fill=fulda_green,text=white}},
+    column 1/.style={nodes={fill=fulda_green,text=white,align=left,text width=3cm,text depth=0.5ex}},
+    column 2/.style={text width=12cm,align=left,every even row/.style={nodes={fill=white}}},
+    column 3/.style={text width=3cm,align=center,every even row/.style={nodes={fill=white}},},
+    row 1 column 1/.style={nodes={fill=fulda_green}},%									1. spalte oben
+    prefix after command={[rounded corners=4mm] (m.north east) rectangle (m.south west)}
+    ] {
+    & $\ \ $ Hackintosh Gigabyte Z77 DS3H Mainboard\\
+    $\ \ $ CPU, RAM   			& $\ \ $ i7 3770, 24 GB\\
+    $\ \ $ FESTPLATTE				& $\ \ $ 240GB PCIE, 92TB SATA\\
+    $\ \ $ WAN/LAN		& $\ \ $ Atheros Gigabit Netzwerk \\
+    $\ \ $ WIFI		    & $\ \ $ TP-Link T8E  450/1300 Mbit AC Wifi \\
+    $\ \ $ USB				& $\ \ $ V2.0 / v3.0	 \\
+    $\ \ $ MONITOR		& $\ \ $ \zoll{27} Samsung SMS27A650\\
+    & $\ \ $ \zoll{24} Samsung SyncMaster \\
+    & $\ \ $ \zoll{15} iiyama 4:3 \\
+    $\ \ $ KAMERA			& $\ \ $ Logitech C270, Logitech C310  \\
+    $\ \ $ MIKROFON 	& $\ \ $ RØDE NT-USB  \\
+    $\ \ $ OS 			& $\ \ $ MacOS 10.13 High Sierra \\
+    };
+  \end{tikzpicture}
+\end{center}
+\normalsize
+
+\newpage
+% {\vspace{-0,5cm}}
+\subsub{Apple Macbook Pro Retina 15\grqq{} late 2015 }
+
+Standard Macbook Pro Retina in Vollausstattung.\\
+Die SSD wurde ausgetauscht als 80\% der zu erwartenden Schreibzyklen aufgebraucht waren.
+%
+\small
+\color{black}
+\vspace{0.3cm}
+\begin{center}
+  \begin{tikzpicture}
+    \clip node (m) [matrix,matrix of nodes,
+    fill=fulda_green!20,inner sep=0pt,
+    nodes in empty cells,
+    nodes={minimum height=1cm,minimum width=2.6cm,anchor=center,outer sep=0,font=\sffamily},
+    row 1/.style={nodes={fill=fulda_green,text=white}},
+    column 1/.style={nodes={fill=fulda_green,text=white,align=left,text width=3cm,text depth=0.5ex}},
+    column 2/.style={text width=12cm,align=left,every even row/.style={nodes={fill=white}}},
+    column 3/.style={text width=3cm,align=center,every even row/.style={nodes={fill=white}},},
+    row 1 column 1/.style={nodes={fill=fulda_green}},%									1. spalte oben
+    prefix after command={[rounded corners=4mm] (m.north east) rectangle (m.south west)}
+    ] {
+    & $\ \ $ Apple Macbook Pro Retina \zoll{15}\\
+    $\ \ $ CPU, RAM   			& $\ \ $ i7 4870HQ, 16 GB\\
+    $\ \ $ FESTPLATTE 				& $\ \ $ 1TB PCIE (nachgerüstet, langsamer als die originale SSD welche Defekt war)  \\
+    $\ \ $ WAN/LAN		& $\ \ $ Thunderbolt Gigabit Adapter \\
+    $\ \ $ WIFI		    & $\ \ $ Integriertes 600/1300 Mbit AC Wifi \\
+    $\ \ $ USB				& $\ \ $ v3.0	 \\
+    $\ \ $ MONITOR		& $\ \ $ integriertes \zoll{15} Retina Display	 \\
+    $\ \ $ KAMERA			& $\ \ $ Logitech C270 (mehrere vorhanden)  \\
+    $\ \ $ MIKROFON 	& $\ \ $ Integriert oder RØDE NT-USB  \\
+    $\ \ $ OS 			  & $\ \ $ MacOS 10.14 Mojave \\
+    };
+  \end{tikzpicture}
+\end{center}
+\normalsize
+
+{\vspace{0.5cm}}
+
+Da beide Computer ähnlich ausgestattet sind verwendete ich für Streamingtest aus Bequemlichkeit und da dieser stabiler \quote{läuft} den Hackintosh.
+Ebenso habe ich an diesen schon mehrere Monitor fest angeschlossen.
+
+
+\subsub{Genutzte Streamingsoftware}
+% {\vspace{-0.6cm}}
+\begin{center}
+  \textbf{Streamingprogramme} \\
+  \includegraphics[scale=0.35]{./pictures/streamlabsOBJ.png}
+\end{center}
+
+
+
+\begin{itemize}
+  \item OBS
+  \item Streamlabs OBS
+  \item Webbrowser (Vivaldi Chrome basierend)
+\end{itemize}
+
+
+
+
+%
+% Eigenbau mit MacOS 10.13.
+
+% \small
+% \color{black}
+% \vspace{0.3cm}
+% \begin{center}
+% \begin{tikzpicture}
+% \clip node (m) [matrix,matrix of nodes,
+% fill=fulda_green!20,inner sep=0pt,
+% nodes in empty cells,
+% nodes={minimum height=1cm,minimum width=2.6cm,anchor=center,outer sep=0,font=\sffamily},
+% row 1/.style={nodes={fill=fulda_green,text=white}},
+% column 1/.style={nodes={fill=fulda_green,text=white,align=left,text width=3cm,text depth=0.5ex}},
+% column 2/.style={text width=12cm,align=left,every even row/.style={nodes={fill=white}}},
+% column 3/.style={text width=3cm,align=center,every even row/.style={nodes={fill=white}},},
+% row 1 column 1/.style={nodes={fill=fulda_green}},%									1. spalte oben
+% prefix after command={[rounded corners=4mm] (m.north east) rectangle (m.south west)}
+% ] {
+% & $\ \ $ Iphone SE\\
+% $\ \ $ CPU   			& $\ \ $ Apple A9 2x 1.85 GHz\\
+% $\ \ $ RAM 				& $\ \ $ 2 GB LPDDR4 \\
+% $\ \ $ WIFI		    & $\ \ $ Broadcom AC Wifi 433 Mbit \\
+% $\ \ $ USB				& $\ \ $ v3.0	 \\
+% $\ \ $ CAM		    & $\ \ $ 12 megapixels with 1.22µ pixels (iSight)	 \\
+%                   & $\ \ $ 1.2 megapixels (FaceTime) \\
+% $\ \ $ MICROPHONES& $\ \ $ 3x integriert	 \\
+%                   & $\ \ $ 1x Extern Junlin Mikrofon \\
+% $\ \ $ OS 			  & $\ \ $ latest IOS\\
+% 						      & $\ \ $ 867 Mbit (2x2) im 5 Ghz Band (AC) \\
+% };
+% \end{tikzpicture}
+% \end{center}
+% \normalsize
